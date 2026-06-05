@@ -1,14 +1,29 @@
-#Cecilia Aurora Robelo Hernandez 
+# Cecilia Aurora Robelo Hernández
 
 name: Hello World with Workflow
-on:
-  workflow_dispatch: 
 
-job: 
-  #Mi job 1
+on:
+  workflow_dispatch:
+
+jobs:
   Tarea1:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello World"
+      - name: Saludo
+        run: echo "Hola Mundo"
+
+      - name: Fecha Actual
+        run: date
+
+      - name: Mostrar Usuario
+        run: whoami
+
+      - name: Mostrar Directorio Actual
+        run: pwd
+
+      - name: Listar Archivos
+        run: ls -la
+
+      - name: Mostrar Version de Ubuntu
+        run: cat /etc/os-release
