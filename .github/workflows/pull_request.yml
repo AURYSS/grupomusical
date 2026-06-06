@@ -1,5 +1,4 @@
-# Cecilia Aurora Robelo Hernandez
-name: Pull_Request_act2
+name: Pull Request Info
 
 on:
   pull_request:
@@ -9,8 +8,9 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Mostrar datos del Pull Request
+      - name: Datos del Pull Request
         run: |
+          echo "=== DATOS DEL PULL REQUEST ==="
           echo "Destino: ${{ github.event.pull_request.base.ref }}"
           echo "Origen: ${{ github.event.pull_request.head.ref }}"
           echo "Titulo: ${{ github.event.pull_request.title }}"
